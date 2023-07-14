@@ -6,10 +6,8 @@ import './app.css';
 //compenents
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-
 // pages
 import Home from './pages/Home';
-import Explore from './pages/Explore';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Offers from './pages/Offers';
@@ -17,6 +15,8 @@ import Blog from './pages/Blog';
 import Smartphones from './products/main/Smartphones';
 import Accessories from './products/main/Accessories';
 import Clothes from './products/main/Clothes';
+import NotFound from './pages/NotFound';
+import Login from './pages/Login';
 
 const App = () => {
   return (
@@ -24,11 +24,9 @@ const App = () => {
       <Router>
         <div>
           <Navbar />
-
           <Routes>
             <Route exact path="/" element={<Home/>} />
             <Route exact path="/home" element={<Home/>} />
-            <Route path="/explore" element={<Explore/>} />
             <Route path="/about" element={<About/>} />
             <Route path="/contact" element={<Contact/>} />
             <Route path="/offers" element={<Offers/>} />
@@ -36,6 +34,8 @@ const App = () => {
             <Route path="/clothing" element={<Clothes/>} />
             <Route path="/accessories" element={<Accessories/>} />
             <Route path="/smartphones" element={<Smartphones/>} />
+            <Route path="/login" element={<Login/>} />
+            <Route path='*' element={<NotFound/>} />
           </Routes>
 
           <Footer />

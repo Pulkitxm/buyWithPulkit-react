@@ -5,10 +5,10 @@ const Navbar = () => {
   return (
       <nav class="navbar navbar-expand-lg container-fluid navbar-dark bg-dark">
           <div class="container-fluid">
-              <a href="/home" class="navbar-brand head">
+              <a href="/" class="navbar-brand head">
                   <img src={logo} alt="" width="30" height="24" class="d-inline-block align-text-top" />              buyWithPulkit
               </a>
-              <a class="navbar-brand" href="/home">Home</a>
+              <a class="navbar-brand" href="/">Home</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                   data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                   aria-label="Toggle navigation">

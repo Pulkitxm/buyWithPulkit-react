@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <div class="footer">
       <div class="top">
-        <a href="/home">
+        <a href="/">
           <div class="start">
             <img src={logo} alt="" />
             <div class="title" >
@@ -22,7 +22,7 @@ const Footer = () => {
         <div class="mid">
           <ul>
             <li>
-              <a href="/home">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
               <a href="/About">Abouts us</a>

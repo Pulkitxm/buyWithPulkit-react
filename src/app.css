@@ -1,4 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Poppins:wght@200&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.head {
+    font-family: 'Darumadrop One';
+}
+
+.whoami {
+    display: flex;
+    margin: 100px;
+}
+
+.whoami .ques {
+    font-size: 3em;
+    margin: auto;
+    width: 21em;
+}
+
+.whoami .ans {
+    margin-left: 50px;
+    font-size: 2.3em;
+}
+
+.card-row {
+    display: flex;
+    justify-content: center;
+}
+
+.card-row .card {
+    margin: 0 20px;
+}
+
+.text {
+    display: flex;
+    margin: 100px;
+}
+
+.text .text-1 {
+    font-size: 2.5em;
+    margin: auto;
+}
+
+.text .text-2 {
+    margin-left: 50px;
+    font-size: 2em;
+}
+
+.carousel-item img{
+    transition: .5s;
+    cursor: pointer;
+}
+
+.carousel-item  img:hover{
+    transform: scale(1.1);
+}
+
+.not-found-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.not-found-heading {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.not-found-description {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.not-found-image {
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+    mix-blend-mode: multiply;
+}
+
+.not-found-back-link {
+    font-size: 16px;
+}
+
+.not-found-back-link a {
+    color: blue;
+    text-decoration: none;
+}
+
+.not-found-back-link a:hover {
+    text-decoration: underline;
+}
 .footer {
     background: #000;
     color: white;
@@ -29,6 +127,7 @@
 
 .footer .bot-end ul li img {
     margin-bottom: 100px;
+    margin:0 20px 100px 20px ;
 }
 
 .footer .top a .top ul,
@@ -64,4 +163,149 @@
     align-items: center;
     display: inline;
     font-size: 2rem;
+}
+
+.form {
+    height: 98vh;
+    width: 98vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form {
+    font-size: 30px;
+    max-width: 600px;
+}
+
+form label {
+    padding-right: 100px;
+}
+
+#submit {
+    margin: auto;
+    background: rgb(0, 195, 255);
+}
+
+.form form table th span {
+    color: red;
+}
+
+.inputf,
+.inputf::placeholder {
+    color: rgb(0, 195, 255);
+}
+
+.inputf {
+    margin: 10px;
+    border-radius: 10px;
+    border: solid 5px rgb(0, 0, 0);
+    display: flex;
+    text-align: center;
+}
+
+.inputf:focus {
+    border: solid 5px rgb(0, 195, 255);
+    outline: none;
+}
+
+table tr:hover {
+    color: rgb(0, 195, 255);
+}
+
+table tr th label:hover {
+    cursor: pointer;
+}
+
+.form {
+    text-align: center;
+}
+
+#submit {
+    margin: auto;
+    background-color: rgb(0, 195, 255);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: 0.5s;
+}
+
+#submit:hover {
+    background: white;
+    color: rgb(0, 135, 205);
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+#submit:active {
+    background-color: rgb(0, 135, 205);
+    transform: scale(0.95);
+    color: white;
+}
+
+#submit:focus {
+    outline: none;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+}
+
+.success-card {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries for responsiveness */
+
+@media (max-width: 768px) {
+    form {
+        font-size: 24px;
+        margin: 50px auto;
+        max-width: 400px;
+    }
+
+    form label {
+        padding-right: 50px;
+    }
+
+    .inputf {
+        margin: 5px;
+    }
+
+    /* Styles for success card in medium-sized screens */
+    .success-card {
+        padding: 20px;
+    }
+
+    .success-header {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    form {
+        font-size: 20px;
+        margin: 30px auto;
+        max-width: 300px;
+    }
+
+    form label {
+        padding-right: 30px;
+    }
+
+    .inputf {
+        margin: 3px;
+    }
+
+    /* Styles for success card in small-sized screens */
+    .success-card {
+        padding: 15px;
+    }
+
+    .success-header {
+        font-size: 1.6rem;
+    }
 }
