@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
@@ -7,7 +6,6 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Accessories from '../products/home/Accessories';
 import Clothes from '../products/home/Clothes';
 import Smartphones from '../products/home/Smartphones';
-
 
 const Home = () => {
   return (

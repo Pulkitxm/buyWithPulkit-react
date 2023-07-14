@@ -42,13 +42,13 @@ const Footer = () => {
         <div class="end">
           <ul>
             <li>
-              <a href="../products/smartphones">Smartphones</a>
+              <a href="./smartphones">Smartphones</a>
             </li>
             <li>
-              <a href="../products/accessories">Accessories</a>
+              <a href="./accessories">Accessories</a>
             </li>
             <li>
-              <a href="../products/clothing">Clothing</a>
+              <a href="./clothing">Clothing</a>
             </li>
           </ul>
         </div>
