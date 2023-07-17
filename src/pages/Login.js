@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion'
 
 const Login = () => {
-    const [name, setName] = useState('Pulkit');
-    const [email, setEmail] = useState('aaa@aaa.com');
-    const [number, setNumber] = useState('9876543210');
-    const [pass, setPass] = useState('GX46aS2Cpd9..J.');
-    const [cpass, setCpass] = useState('GX46aS2Cpd9..J.');
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [number, setNumber] = useState('');
+    const [pass, setPass] = useState('');
+    const [cpass, setCpass] = useState('');
     const [nameError, setNameError] = useState('');
     const [emailError, setEmailError] = useState('');
     const [numberError, setNumberError] = useState('');

@@ -2,11 +2,24 @@ import React from 'react';
 
 const Card = (props) => {
 
-  let u4 = '/'; // Initial value for u4
-
-  if (props.hasOwnProperty('url4')) {
-    u4 = props.url4; // Update u4 if myProp is passed
+  let anchor = () => {
+    return (
+      <a href={props.url4}>
+        <button className="btn btn-primary">view more</button>
+      </a>
+    )
   }
+  if (props.url4 !== '/smartphones' && props.url4 !== '/accessories' && props.url4 !== '/clothing') {
+    anchor = () =>{
+      return(
+        <a href={props.url4} target='_blank'>
+          <button className="btn btn-primary">buy now</button>
+        </a>
+      )
+    }
+  }
+  
+  const callanchor = anchor();
 
   return (
     <div className="card" style={{ width: '18rem', display: 'inline-block', margin: 50 }}>
@@ -32,9 +45,7 @@ const Card = (props) => {
         <li className="list-group-item">{props.item_specs}</li>
       </ul>
       <div className="card-body">
-        <a href={u4}>
-          <button className="btn btn-primary"> view more</button>
-        </a>
+        {callanchor}
       </div>
     </div>
   );
