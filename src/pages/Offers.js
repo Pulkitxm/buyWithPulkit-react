@@ -39,9 +39,26 @@ import u__10 from "../assets/Products/Clothes/Women's Long Sleeve Ruched/1.jpg";
 import u__12 from "../assets/Products/Clothes/Women's Long Sleeve Ruched/2.jpg";
 import u__11 from "../assets/Products/Clothes/Women's Long Sleeve Ruched/3.jpg";
 
-const Accessories = () => {
+import { motion } from 'framer-motion'
+
+const Offers = () => {
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0, transform: 'translateY(10%)' }}
+      animate={{
+        opacity: 1,
+        transform: 'translateY(0px)',
+        // Add a bounce animation to the translateY property
+        motion: {
+          staggerChildren: 0.2,
+          bounce: {
+            duration: 0.5,
+            easing: 'ease-in-out',
+          },
+        },
+      }}
+      exit={{ opacity: 0, transform: 'translateY(10%)' }}
+    >
       <div style={{ margin: 10 }}>
         <div style={{ marginTop: 10, marginLeft: 10, marginRight: 10, display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }} >
           <OfferCard url1={u1}
@@ -151,8 +168,8 @@ const Accessories = () => {
           />
         </div>
       </div>
-    </>
+    </motion.div>
   )
 }
 
-export default Accessories
+export default Offers

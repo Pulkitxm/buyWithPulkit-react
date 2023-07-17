@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion'
 
 const Login = () => {
     const [name, setName] = useState('Pulkit');
@@ -64,7 +65,22 @@ const Login = () => {
     };
 
     return (
-        <div className="form">
+        <motion.div
+            initial={{ opacity: 0, transform: 'translateY(10%)' }}
+            animate={{
+                opacity: 1,
+                transform: 'translateY(0px)',
+                // Add a bounce animation to the translateY property
+                motion: {
+                    staggerChildren: 0.2,
+                    bounce: {
+                        duration: 0.5,
+                        easing: 'ease-in-out',
+                    },
+                },
+            }}
+            exit={{ opacity: 0, transform: 'translateY(10%)' }}
+            className="form">
             <h1>Login/Register</h1>
             <form onSubmit={validate}>
                 <table>
@@ -153,7 +169,7 @@ const Login = () => {
             <p id="error-number">{numberError}</p>
             <p id="error-pass">{passError}</p>
             <p id="error-cpass">{cpassError}</p>
-        </div>
+        </motion.div>
     );
 };
 

@@ -1,10 +1,26 @@
 import React from 'react'
 
 import bg from "../assets/img1.webp";
+import { motion } from 'framer-motion'
 
 const About = () => {
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0, transform: 'translateY(10%)' }}
+      animate={{
+        opacity: 1,
+        transform: 'translateY(0px)',
+        // Add a bounce animation to the translateY property
+        motion: {
+          staggerChildren: 0.2,
+          bounce: {
+            duration: 0.5,
+            easing: 'ease-in-out',
+          },
+        },
+      }}
+      exit={{ opacity: 0, transform: 'translateY(10%)' }}
+    >
       <nav id="navbar-example2" className="navbar navbar-light bg-light px-3">
         <a className="navbar-brand" style={{ cursor: 'pointer' }}>
           <ol className="breadcrumb">
@@ -106,7 +122,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </>
+    </motion.div>
   )
 }
 

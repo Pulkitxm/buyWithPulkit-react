@@ -15,9 +15,15 @@ import u10 from "../../assets/Products/Accessories/pTron Bullet  Quick Charger/1
 import u12 from "../../assets/Products/Accessories/pTron Bullet  Quick Charger/2.jpg";
 import u11 from "../../assets/Products/Accessories/pTron Bullet  Quick Charger/3.jpg";
 
+
+import { motion } from 'framer-motion'
+
 const Accessories = () => {
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}>
       <nav id="navbar-example2" className="navbar navbar-light bg-light px-3">
         <a className="navbar-brand" style={{ cursor: "pointer" }}>
           <ol className="breadcrumb">
@@ -190,7 +196,7 @@ const Accessories = () => {
           />
         </div>
       </div>
-    </>
+    </motion.div>
   );
 }
 

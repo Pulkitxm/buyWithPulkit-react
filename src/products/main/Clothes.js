@@ -15,9 +15,26 @@ import u10 from "../../assets/Products/Clothes/Women's Long Sleeve Ruched/1.jpg"
 import u12 from "../../assets/Products/Clothes/Women's Long Sleeve Ruched/2.jpg";
 import u11 from "../../assets/Products/Clothes/Women's Long Sleeve Ruched/3.jpg";
 
+import { motion } from 'framer-motion'
+
 const Clothing = () => {
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0, transform: 'translateY(10%)' }}
+      animate={{
+        opacity: 1,
+        transform: 'translateY(0px)',
+        // Add a bounce animation to the translateY property
+        motion: {
+          staggerChildren: 0.2,
+          bounce: {
+            duration: 0.5,
+            easing: 'ease-in-out',
+          },
+        },
+      }}
+      exit={{ opacity: 0, transform: 'translateY(10%)' }}
+    >
       <nav id="navbar-example2" className="navbar navbar-light bg-light px-3">
         <a className="navbar-brand" style={{ cursor: "pointer" }}>
           <ol className="breadcrumb">
@@ -188,7 +205,7 @@ const Clothing = () => {
       </div>
       
 
-    </>
+    </motion.div>
   );
 }
 
