@@ -10,3 +10,5 @@ In the project directory, you can run:
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+![image](https://github.com/Pulkitxm/buyWithPulkit-react/assets/65671483/16d41fd7-46ac-47a8-9f43-d7a460aa969c)
